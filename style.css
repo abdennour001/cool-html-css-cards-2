@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+body {
+	min-height: 100vh;
+	margin: 0 auto;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #060b22;
+	font-family: 'Poppins', sans-serif;
+	color: #fff;
+	font-size: .9rem;
+}
+
+.container {
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	padding: 4rem;
+}
+
+
+.card {
+	width: 240px;
+	height: 360px;
+	padding: 1rem;
+	background: #060b22;
+	border: 1px solid #03061b;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card::before {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: #fff;
+	transform: skew(2deg, 2deg);
+	z-index: -1;
+}
+
+.card:nth-child(1):before {
+	background: linear-gradient(315deg, #ff0057, #e64a19);
+}
+
+.card:nth-child(2):before {
+	background: linear-gradient(315deg, #89ff00, #00bcd4);
+}
+
+.card:nth-child(3):before {
+	background: linear-gradient(315deg, #e91e63, #5d02ff);
+}
+
+.card:nth-child(4):before {
+	background: linear-gradient(315deg, #ff0000, #ffc107);
+}
+
+.card::after {
+	content: '';
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(255, 255, 255, 0.05);
+}
+
+.card h2 {
+	font-weight: 500;
+}
+
+.background {
+	position: absolute;
+	top: 5%;
+	right: 4%;
+	font-size: 5.5rem;
+}
+
+.background h1 {
+	padding: 0;
+	margin: 0;
+	opacity: 0.05;
+	pointer-events: none;
+	transition: 0.5s;
+}
+
+.content {
+	margin-top: 2.5rem;
+	z-index: 1000;
+}
+
+.content p {
+	margin-bottom: 1rem;
+	padding-right: 2rem;
+	font-weight: 400;
+}
+
+.content a {
+	padding: .6rem 1.4rem;
+	text-decoration: none;
+	color: #fff;
+	display: inline-block;
+	border: 2px solid #fff;
+	opacity: 0;
+	transform: translateY(-60px);
+	transition: 0.5s;
+}
+
+.content a:hover {
+	color: #060b22; 
+	background: #fff;
+}
+
+.card:hover a {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.card:hover h1 {
+	transform: translateY(-60px);
+}
